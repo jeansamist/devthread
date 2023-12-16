@@ -17,12 +17,10 @@ import { ArrowLeft2, ArrowRight2 } from "iconsax-react";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ArticleCard2 } from "@/components/ArticleCard2";
-import { Circles } from "@/components/Circles";
 
 export default function Page() {
   return (
     <main>
-      <Circles />
       <div className="container pt-8 md:pt-16 relative z-20">
         <div className="mb-8 md:mb-16">
           <h1 className="text-5xl font-extrabold">DevThread, Home</h1>
