@@ -21,28 +21,6 @@ import { ArticleCard2 } from "@/components/ArticleCard2";
 export default function Page() {
   return (
     <main>
-      <div className="fixed top-1/2 -translate-x-1/2 translate-y-1/2 z-0">
-        <div className="shadow-inner border rounded-full w-80 h-80 p-8">
-          <div className="h-full w-full p-8   shadow-inner border rounded-full">
-            <div className="h-full w-full  shadow-inner border rounded-full p-8">
-              <div className="h-full w-full   shadow-inner border rounded-full p-8">
-                <div className="h-full w-full   shadow-inner border rounded-full"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="fixed top-0 right-0 translate-x-1/2 z-0">
-        <div className="  shadow-md border rounded-full w-80 h-80 p-8">
-          <div className="h-full w-full p-8   shadow-md border rounded-full">
-            <div className="h-full w-full   shadow-md border rounded-full p-8">
-              <div className="h-full w-full   shadow-md border rounded-full p-8">
-                <div className="h-full w-full   shadow-md border rounded-full"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="container pt-8 md:pt-16 relative z-20">
         <div className="mb-8 md:mb-16">
           <h1 className="text-5xl font-extrabold">DevThread, Home</h1>
