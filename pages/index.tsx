@@ -6,7 +6,7 @@ export default function Page() {
       <Head>
         <title>DevThread</title>
       </Head>
-      Comming Soon
+      <div>Comming soon</div>
     </main>
   );
 }

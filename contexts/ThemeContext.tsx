@@ -1,19 +1,9 @@
-import { useTheme } from '@/hooks/useTheme';
-import { Theme } from '@/types/Theme';
-import { FunctionComponent, PropsWithChildren, createContext } from 'react'
+"use client";
 
-type defaultType = Theme
+import * as React from "react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { type ThemeProviderProps } from "next-themes/dist/types";
 
-const default_:defaultType = {
-  setTheme(theme) {
-      
-  },
-  theme: 'light'
+export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
 }
-
-export const ThemeContext = createContext(default_)
-
-export const ThemeProvider: FunctionComponent<PropsWithChildren<{theme?: 'light' | 'dark' | 'system'}>> = ({ theme = 'light', children }) => {
-  const theme_ = useTheme(theme);
-  return <ThemeContext.Provider value={theme_}>{children}</ThemeContext.Provider>;
-};
