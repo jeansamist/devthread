@@ -20,12 +20,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Login } from "iconsax-react";
+import { Google, Login } from "iconsax-react";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 const formSchema = z.object({
-  username: z.string().min(3, {
-    message: "Username must be at least 3 characters.",
-  }),
+  email: z.string().email(),
   password: z.string().min(8, {
     message: "Password must be at least 8 characters.",
   }),
@@ -34,7 +33,7 @@ export default function Page() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
+      email: "",
       password: "",
     },
   });
@@ -43,7 +42,7 @@ export default function Page() {
   }
   return (
     <main>
-      <div className="container flex p-8 md:pt-16 justify-center">
+      <div className="container flex flex-col p-8 md:pt-12 items-center gap-4">
         <Card className="max-w-lg w-full">
           <CardHeader>
             <CardTitle className="text-2xl">Log in to your account</CardTitle>
@@ -57,12 +56,12 @@ export default function Page() {
               >
                 <FormField
                   control={form.control}
-                  name="username"
+                  name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Username</FormLabel>
+                      <FormLabel>Your E-mail</FormLabel>
                       <FormControl>
-                        <Input placeholder="shadcn" {...field} />
+                        <Input placeholder="user@example.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -73,15 +72,19 @@ export default function Page() {
                   name="password"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Password</FormLabel>
+                      <FormLabel>Your password</FormLabel>
                       <FormControl>
-                        <Input placeholder="Type your password" {...field} />
+                        <Input
+                          placeholder="Type your password"
+                          type="password"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="space-x-2">
+                <Button type="submit" className="space-x-2 w-full bs">
                   <Login variant="Linear" size={20} />
                   <span>Sing In</span>
                 </Button>
@@ -89,6 +92,20 @@ export default function Page() {
             </Form>
           </CardContent>
         </Card>
+        <div className="flex justify-around gap-4">
+          <Button
+            className="w-16 p-0 h-16 flex items-center justify-center"
+            variant={"ghost"}
+          >
+            <GitHubLogoIcon />
+          </Button>
+          <Button
+            className="w-16 p-0 h-16 flex items-center justify-center"
+            variant={"ghost"}
+          >
+            <Google variant="Bold" size={16} />
+          </Button>
+        </div>
       </div>
     </main>
   );
