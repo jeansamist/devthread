@@ -1,171 +1,69 @@
-import { ArticleCard1 } from "@/components/ArticleCard1";
+import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css/core";
-import { ReactOriginal } from "devicons-react";
-import { ArrowLeft2, ArrowRight2 } from "iconsax-react";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ArticleCard2 } from "@/components/ArticleCard2";
 
 export default function Page() {
   return (
     <main>
-      <div className="container pt-8 md:pt-16 relative z-20">
-        <div className="mb-8 md:mb-16">
-          <h1 className="text-5xl font-extrabold">DevThread, Home</h1>
-          <p className="text-muted-foreground">
-            Welcome on <b>DevThread a blog for all Developer topics</b>
-          </p>
-        </div>
-        <Splide
-          hasTrack={false}
-          options={{
-            rewind: true,
-            perPage: 3,
-            gap: 12,
-            breakpoints: {
-              930: {
-                perPage: 2,
-              },
-              650: {
-                perPage: 1,
-              },
-            },
-          }}
-        >
-          <SplideTrack>
-            <SplideSlide>
-              <ArticleCard1 id={1} />
-            </SplideSlide>
-            <SplideSlide>
-              <ArticleCard1 id={1} />
-            </SplideSlide>
-            <SplideSlide>
-              <ArticleCard1 id={1} />
-            </SplideSlide>
-            <SplideSlide>
-              <ArticleCard1 id={1} />
-            </SplideSlide>
-          </SplideTrack>
-          <div className="splide__arrows space-x-4">
-            <button className="splide__arrow absolute top-1/2 left-0 -translate-y-1/2 splide__arrow--prev p-2 rounded-full bg-accent">
-              <ArrowLeft2 />
-            </button>
-            <button className="splide__arrow absolute top-1/2 right-0 -translate-y-1/2 splide__arrow--next p-2 rounded-full bg-accent">
-              <ArrowRight2 />
-            </button>
+      <div
+        className="m-8 bg-muted rounded-sm text-primary-foreground min-h-[575px] h-[70vh] relative overflow-hidden"
+        style={{
+          background:
+            "url('https://miro.medium.com/v2/resize:fit:1358/1*U62pEikCBvM1gjIDlAry7Q.png') no-repeat center / cover",
+        }}
+      >
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-primary flex items-end justify-start p-16 ">
+          <div className="absolute right-1/2 translate-x-1/2 md:translate-x-0 top-8 md:right-8">
+            <Avatar username="Jeansamist" />
           </div>
-        </Splide>
-        <div className="flex flex-col sm:flex-row gap-4 mt-8 md:mt-16">
-          <div className="w-full sm:w-2/3 space-y-4">
-            <div className="space-y-4">
-              <h2 className="text-3xl font-extrabold">Recents Articles</h2>
-              <p className="text-muted-foreground">
-                Find the latest news, discoveries and research in web/mobile
-                development.
-              </p>
+          <div className="w-full md:w-3/4 lg:w-1/2 text-md md:text-xl text-center md:text-left flex flex-col space-y-4">
+            <div>
+              <Badge>React.js</Badge>
             </div>
-            <ArticleCard2
-              author={{
-                email: "jeansamist@gmail.com",
-                fullName: "BAHA Ephraim",
-                username: "jeansamist",
-              }}
-              cover="https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F95b79182-7a3e-4f15-8157-665b4150436c_1920x960.jpeg"
-              content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit provident officiis veritatis aut dignissimos laudantium quae quibusdam ratione sit et inventore quod, incidunt nemo id magnam eligendi ut. Veritatis, pariatur."
-              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit provident officiis veritatis aut dignissimos laudantium quae quibusdam ratione sit et inventore quod, incidunt nemo id magnam eligendi ut. Veritatis, pariatur."
-              title="Les développeurs francophones à suivre pour commencer la programmation en 2023"
-              tags={[{ name: "React" }]}
-            />
-            <ArticleCard2
-              author={{
-                email: "jeansamist@gmail.com",
-                fullName: "BAHA Ephraim",
-                username: "jeansamist",
-              }}
-              cover="https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F95b79182-7a3e-4f15-8157-665b4150436c_1920x960.jpeg"
-              content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit provident officiis veritatis aut dignissimos laudantium quae quibusdam ratione sit et inventore quod, incidunt nemo id magnam eligendi ut. Veritatis, pariatur."
-              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit provident officiis veritatis aut dignissimos laudantium quae quibusdam ratione sit et inventore quod, incidunt nemo id magnam eligendi ut. Veritatis, pariatur."
-              title="Les développeurs francophones à suivre pour commencer la programmation en 2023"
-              tags={[{ name: "React" }]}
-            />
-            <ArticleCard2
-              author={{
-                email: "jeansamist@gmail.com",
-                fullName: "BAHA Ephraim",
-                username: "jeansamist",
-              }}
-              cover="https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F95b79182-7a3e-4f15-8157-665b4150436c_1920x960.jpeg"
-              content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit provident officiis veritatis aut dignissimos laudantium quae quibusdam ratione sit et inventore quod, incidunt nemo id magnam eligendi ut. Veritatis, pariatur."
-              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit provident officiis veritatis aut dignissimos laudantium quae quibusdam ratione sit et inventore quod, incidunt nemo id magnam eligendi ut. Veritatis, pariatur."
-              title="Les développeurs francophones à suivre pour commencer la programmation en 2023"
-              tags={[{ name: "React" }]}
-            />
-            <ArticleCard2
-              author={{
-                email: "jeansamist@gmail.com",
-                fullName: "BAHA Ephraim",
-                username: "jeansamist",
-              }}
-              cover="https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F95b79182-7a3e-4f15-8157-665b4150436c_1920x960.jpeg"
-              content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit provident officiis veritatis aut dignissimos laudantium quae quibusdam ratione sit et inventore quod, incidunt nemo id magnam eligendi ut. Veritatis, pariatur."
-              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit provident officiis veritatis aut dignissimos laudantium quae quibusdam ratione sit et inventore quod, incidunt nemo id magnam eligendi ut. Veritatis, pariatur."
-              title="Les développeurs francophones à suivre pour commencer la programmation en 2023"
-              tags={[{ name: "React" }]}
-            />
+            <h1 className="font-black text-3xl md:text-5xl leading-snug">
+              My React.js code snippets
+            </h1>
+            <p className="hidden md:block leading-loose">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto esse cum maiores obcaecati, voluptatem natus ab
+              temporibus expedita consequatur amet mollitia ipsum quidem
+              molestiae, quae laboriosam aspernatur doloremque voluptates
+              deserunt!
+            </p>
+            <div>
+              <Link
+                className={buttonVariants({ variant: "secondary-light" })}
+                href={"/article/discover-my-Reactjs-code-snippets-1"}
+              >
+                Read article
+              </Link>
+            </div>
           </div>
-          <div className="w-full sm:w-1/3">
-            <Card>
-              <CardHeader>
-                <CardTitle>Topics</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <Link
-                  href={"#"}
-                  className={cn(
-                    buttonVariants({ variant: "ghost" }),
-                    "w-full justify-between flex"
-                  )}
-                >
-                  <div className="space-x-4 flex items-center">
-                    <ReactOriginal />
-                    <span>React</span>
-                  </div>
-                  <Badge variant={"secondary"}>+5k posts</Badge>
-                </Link>
-                <Link
-                  href={"#"}
-                  className={cn(
-                    buttonVariants({ variant: "ghost" }),
-                    "space-x-4 w-full justify-start flex"
-                  )}
-                >
-                  <ReactOriginal />
-                  <span>React</span>
-                </Link>
-                <Link
-                  href={"#"}
-                  className={cn(
-                    buttonVariants({ variant: "ghost" }),
-                    "space-x-4 w-full justify-start flex"
-                  )}
-                >
-                  <ReactOriginal />
-                  <span>React</span>
-                </Link>
-              </CardContent>
-            </Card>
+        </div>
+      </div>
+      <div className="m-8 bg-white rounded-sm min-h-96 p-8 flex  items-center">
+        <div className="container space-y-8 text-center">
+          <h1 className="font-black text-3xl md:text-5xl leading-snug">
+            Discover nice articles here !
+          </h1>
+          <p className="hidden md:block leading-loose">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            esse cum maiores obcaecati, voluptatem natus ab temporibus expedita
+            consequatur amet mollitia ipsum quidem molestiae, quae laboriosam
+            aspernatur doloremque voluptates deserunt!
+          </p>
+          <div>
+            <Input placeholder="Search..." />
+          </div>
+          <div className="flex gap-4 justify-center w-full flex-wrap">
+            <Button>All</Button>
+            <Button variant={"ghost"}>React.js</Button>
+            <Button variant={"ghost"}>Javascript</Button>
+            <Button variant={"ghost"}>Laravel</Button>
+            <Button variant={"ghost"}>Java</Button>
+            <Button variant={"ghost"}>Koltin</Button>
           </div>
         </div>
       </div>
