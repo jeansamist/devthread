@@ -67,6 +67,168 @@ export default function Page() {
           </div>
         </div>
       </div>
+      <div className="m-8 space-y-8">
+        <h1 className="font-black text-center text-3xl md:text-5xl leading-snug">
+          Recent blog posts
+        </h1>
+        <div className="grid grid-cols-3 gap-4">
+          <div className="p-4 bg-transparent transition-colors hover:bg-white rounded-md">
+            <div
+              className="aspect-video w-full rounded-sm"
+              style={{
+                background:
+                  "url('https://miro.medium.com/v2/resize:fit:1358/1*U62pEikCBvM1gjIDlAry7Q.png') no-repeat center / cover",
+              }}
+            ></div>
+            <div className="flex justify-center -translate-y-1/2">
+              <Avatar username="Jeansamist" />
+            </div>
+            <div className="space-y-4">
+              <Badge>React.js</Badge>
+              <h3 className="font-bold text-xl md:text-3xl leading-snug">
+                My favorite Mac OSX backgrounds
+              </h3>
+              <p className="leading-loose">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestias molestiae repudiandae necessitatibus fuga, non,
+                debitis suscipit est laboriosam tempora consectetur animi.
+                Mollitia vero quae voluptatum? Ex, corporis quia. Adipisci,
+                dolores.
+              </p>
+              <Link
+                href={"/"}
+                className={buttonVariants({ variant: "secondary" })}
+              >
+                Read article
+              </Link>
+            </div>
+          </div>
+          <div className="p-4 bg-transparent transition-colors hover:bg-white rounded-md">
+            <div
+              className="aspect-video w-full rounded-sm"
+              style={{
+                background:
+                  "url('https://miro.medium.com/v2/resize:fit:1358/1*U62pEikCBvM1gjIDlAry7Q.png') no-repeat center / cover",
+              }}
+            ></div>
+            <div className="flex justify-center -translate-y-1/2">
+              <Avatar username="Jeansamist" />
+            </div>
+            <div className="space-y-4">
+              <Badge>React.js</Badge>
+              <h3 className="font-bold text-xl md:text-3xl leading-snug">
+                My favorite Mac OSX backgrounds
+              </h3>
+              <p className="leading-loose">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestias molestiae repudiandae necessitatibus fuga, non,
+                debitis suscipit est laboriosam tempora consectetur animi.
+                Mollitia vero quae voluptatum? Ex, corporis quia. Adipisci,
+                dolores.
+              </p>
+              <Link
+                href={"/"}
+                className={buttonVariants({ variant: "secondary" })}
+              >
+                Read article
+              </Link>
+            </div>
+          </div>
+          <div className="p-4 bg-transparent transition-colors hover:bg-white rounded-md">
+            <div
+              className="aspect-video w-full rounded-sm"
+              style={{
+                background:
+                  "url('https://miro.medium.com/v2/resize:fit:1358/1*U62pEikCBvM1gjIDlAry7Q.png') no-repeat center / cover",
+              }}
+            ></div>
+            <div className="flex justify-center -translate-y-1/2">
+              <Avatar username="Jeansamist" />
+            </div>
+            <div className="space-y-4">
+              <Badge>React.js</Badge>
+              <h3 className="font-bold text-xl md:text-3xl leading-snug">
+                My favorite Mac OSX backgrounds
+              </h3>
+              <p className="leading-loose">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestias molestiae repudiandae necessitatibus fuga, non,
+                debitis suscipit est laboriosam tempora consectetur animi.
+                Mollitia vero quae voluptatum? Ex, corporis quia. Adipisci,
+                dolores.
+              </p>
+              <Link
+                href={"/"}
+                className={buttonVariants({ variant: "secondary" })}
+              >
+                Read article
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <Button>Load more articles</Button>
+        </div>
+      </div>
+      <div className="m-8 space-y-8">
+        <h1 className="font-black text-center text-3xl md:text-5xl leading-snug">
+          Discover writers
+        </h1>
+        <div></div>
+        <div className="grid grid-cols-3 gap-4 justify-center w-full flex-wrap">
+          <div className="p-4 bg-transparent transition-colors hover:bg-white rounded-md w-full">
+            <div
+              className="w-full aspect-square bg-white rounded-sm"
+              style={{
+                background: `url("https://laravel.cm/media/197/profile-pic-zinc.png") no-repeat center / cover`,
+              }}
+            ></div>
+            <div className="flex justify-center -translate-y-1/2">
+              <div
+                className={
+                  "p-2 px-4 font-bold inline-block backdrop-blur-lg rounded-full shadow bg-primary text-primary-foreground"
+                }
+              >
+                Jeansamist
+              </div>
+            </div>
+          </div>
+          <div className="p-4 bg-transparent transition-colors hover:bg-white rounded-md w-full">
+            <div
+              className="w-full aspect-square bg-white rounded-sm"
+              style={{
+                background: `url("https://laravel.cm/media/197/profile-pic-zinc.png") no-repeat center / cover`,
+              }}
+            ></div>
+            <div className="flex justify-center -translate-y-1/2">
+              <div
+                className={
+                  "p-2 px-4 font-bold inline-block backdrop-blur-lg rounded-full shadow bg-primary text-primary-foreground"
+                }
+              >
+                Jeansamist
+              </div>
+            </div>
+          </div>
+          <div className="p-4 bg-transparent transition-colors hover:bg-white rounded-md w-full">
+            <div
+              className="w-full aspect-square bg-white rounded-sm"
+              style={{
+                background: `url("https://laravel.cm/media/197/profile-pic-zinc.png") no-repeat center / cover`,
+              }}
+            ></div>
+            <div className="flex justify-center -translate-y-1/2">
+              <div
+                className={
+                  "p-2 px-4 font-bold inline-block backdrop-blur-lg rounded-full shadow bg-primary text-primary-foreground"
+                }
+              >
+                Jeansamist
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }

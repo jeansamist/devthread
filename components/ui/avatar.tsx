@@ -13,7 +13,7 @@ export const Avatar: FunctionComponent<AvatarProps> = ({
   return (
     <div
       className={cn(
-        "p-2 backdrop-blur-lg rounded-full flex space-x-4 items-center shadow",
+        "p-2 backdrop-blur-lg rounded-full inline-flex space-x-4 items-center shadow",
         variant === "dark"
           ? "bg-primary/30 text-primary-foreground"
           : "bg-primary-foreground/30 text-primary"
